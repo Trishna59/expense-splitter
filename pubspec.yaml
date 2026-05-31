@@ -1,5 +1,5 @@
-name: flutter_application_1
-description: "A new Flutter project."
+name: Expenses_splitter
+description: "A Flutter app for splitting expenses among groups with real-time sync"
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -15,9 +15,7 @@ dependencies:
   firebase_auth: ^6.5.1
   cloud_firestore: ^6.4.1
   flutter_riverpod: ^3.3.1
-  dependencies:
-  flutter_secure_storage: ^9.0.0
-  http: ^1.2.0
+ 
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +24,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  <application
-    android:usesCleartextTraffic="true"   <!-- ← add this line -->
-    ...>:
