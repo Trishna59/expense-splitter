@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/widgets/auth_field.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/widgets/auth_gradient_button.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/domain/data/auth_method.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/pages/signup_page.dart';
+import 'package:expenses_splitter/feature/auth/presentation/widgets/auth_gradient_button.dart';
+import 'package:expenses_splitter/feature/auth/presentation/widgets/auth_field.dart';
+import 'package:expenses_splitter/feature/auth/presentation/domain/data/auth_method.dart';
+import 'package:expenses_splitter/feature/auth/presentation/pages/signup_page.dart';
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
 

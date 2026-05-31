@@ -1,7 +1,7 @@
 // lib/feature/group/presentation/widgets/group_card.dart
 
 import 'package:flutter/material.dart';
-import 'package:Expenses_splitter/feature/group/data/models/group_model.dart';
+import 'package:expenses_splitter/feature/group/data/models/group_model.dart';
 
 class GroupCard extends StatelessWidget {
   final GroupModel group;

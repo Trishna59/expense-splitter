@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/pages/signin_page.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/domain/data/auth_method.dart';
+import 'package:expenses_splitter/feature/auth/presentation/pages/signin_page.dart';
+import 'package:expenses_splitter/feature/auth/presentation/domain/data/auth_method.dart';
 
 class VerifyEmailPage extends StatefulWidget {
   const VerifyEmailPage({super.key});

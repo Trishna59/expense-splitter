@@ -1,11 +1,11 @@
 // lib/feature/expense/presentation/pages/balances_page.dart
 
 import 'package:flutter/material.dart';
-import 'package:Expenses_splitter/feature/expense/logic/settlement_service.dart';
+import 'package:expenses_splitter/feature/expense/logic/settlement_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Expenses_splitter/feature/group/data/models/group_model.dart';
-import 'package:Expenses_splitter/feature/expense/logic/providers/expense_provider.dart';
-import 'package:Expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
+import 'package:expenses_splitter/feature/expense/logic/providers/expense_provider.dart';
+import 'package:expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
+import 'package:expenses_splitter/feature/group/data/models/group_model.dart';
 
 class BalancesPage extends ConsumerWidget {
   final GroupModel group;

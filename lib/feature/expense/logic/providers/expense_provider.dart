@@ -1,11 +1,11 @@
 // lib/feature/expense/logic/providers/expense_provider.dart
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Expenses_splitter/feature/expense/data/models/expense_model.dart';
-import 'package:Expenses_splitter/feature/expense/data/repositories/expense_repository.dart';
-import 'package:Expenses_splitter/feature/expense/logic/split_calculator.dart';
-import 'package:Expenses_splitter/feature/expense/logic/settlement_service.dart';
-import 'package:Expenses_splitter/feature/group/logic/providers/group_provider.dart';
+import 'package:expenses_splitter/feature/expense/data/models/expense_model.dart';
+import 'package:expenses_splitter/feature/expense/data/repositories/expense_repository.dart';
+import 'package:expenses_splitter/feature/expense/logic/split_calculator.dart';
+import 'package:expenses_splitter/feature/expense/logic/settlement_service.dart';
+import 'package:expenses_splitter/feature/group/logic/providers/group_provider.dart';
 
 final expenseRepositoryProvider = Provider<ExpenseRepository>((ref) {
   return ExpenseRepository();

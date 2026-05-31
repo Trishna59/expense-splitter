@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Expenses_splitter/feature/group/data/models/group_model.dart';
-import 'package:Expenses_splitter/feature/group/logic/providers/group_provider.dart';
-import 'package:Expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
-import 'package:Expenses_splitter/feature/expense/presentation/pages/add_expense_page.dart';
-import 'package:Expenses_splitter/feature/expense/presentation/pages/balances_page.dart';
-import 'package:Expenses_splitter/feature/expense/logic/providers/expense_provider.dart';
-import 'package:Expenses_splitter/feature/expense/presentation/widgets/expense_tile.dart';
+import 'package:expenses_splitter/feature/group/data/models/group_model.dart';
+import 'package:expenses_splitter/feature/group/logic/providers/group_provider.dart';
+import 'package:expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
+import 'package:expenses_splitter/feature/expense/presentation/pages/add_expense_page.dart';
+import 'package:expenses_splitter/feature/expense/presentation/pages/balances_page.dart';
+import 'package:expenses_splitter/feature/expense/logic/providers/expense_provider.dart';
+import 'package:expenses_splitter/feature/expense/presentation/widgets/expense_tile.dart';
 
 class GroupDetailPage extends ConsumerWidget {
   final String groupId;
@@ -51,7 +51,6 @@ class GroupDetailPage extends ConsumerWidget {
         body: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // ── SUMMARY ──────────────────────────────────────────────
             Consumer(
               builder: (context, ref, _) {
                 final expensesAsync =
@@ -61,8 +60,6 @@ class GroupDetailPage extends ConsumerWidget {
               },
             ),
             const SizedBox(height: 20),
-
-            // ── MEMBERS ───────────────────────────────────────────────
             const Text(
               'Members',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -73,8 +70,6 @@ class GroupDetailPage extends ConsumerWidget {
               currentUserId: currentUser?.uid ?? '',
             ),
             const SizedBox(height: 20),
-
-            // ── EXPENSES ──────────────────────────────────────────────
             const Text(
               'Expenses',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -151,22 +146,24 @@ class GroupDetailPage extends ConsumerWidget {
               child: ElevatedButton(
                 onPressed: () async {
                   if (emailController.text.trim().isEmpty) return;
+
+                  // ── FIXED: capture before pop ──────────────────────
+                  final email = emailController.text.trim();
+                  final scaffoldMessenger = ScaffoldMessenger.of(context);
+
                   Navigator.pop(context);
+
                   try {
                     await ref
                         .read(groupNotifierProvider.notifier)
-                        .addMember(group.id, emailController.text.trim());
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Member added!')),
-                      );
-                    }
+                        .addMember(group.id, email);
+                    scaffoldMessenger.showSnackBar(
+                      const SnackBar(content: Text('Member added!')),
+                    );
                   } catch (e) {
-                    if (context.mounted) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Error: $e')),
-                      );
-                    }
+                    scaffoldMessenger.showSnackBar(
+                      SnackBar(content: Text('Error: $e')),
+                    );
                   }
                 },
                 child: const Padding(

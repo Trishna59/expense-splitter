@@ -1,7 +1,7 @@
 // lib/feature/expense/presentation/widgets/expense_tile.dart
 
 import 'package:flutter/material.dart';
-import 'package:Expenses_splitter/feature/expense/data/models/expense_model.dart';
+import 'package:expenses_splitter/feature/expense/data/models/expense_model.dart';
 
 class ExpenseTile extends StatelessWidget {
   final ExpenseModel expense;

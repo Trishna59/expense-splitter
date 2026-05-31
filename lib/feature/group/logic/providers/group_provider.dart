@@ -1,5 +1,5 @@
 // lib/feature/group/logic/providers/group_provider.dart
-import 'package:Expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
+import 'package:expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/models/group_model.dart';
 import '../../data/repositories/group_repository.dart';

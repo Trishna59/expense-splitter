@@ -51,14 +51,17 @@ class GroupRepository {
   // 1. Look up the user by email in the users collection
   // 2. If found, add them to the group
   Future<void> addMemberByEmail(String groupId, String email) async {
-    // Query users collection for this email
+  try {
+    print('Searching for: ${email.trim().toLowerCase()}');
+    
     final query = await _users
         .where('email', isEqualTo: email.trim().toLowerCase())
         .limit(1)
         .get();
 
+    print('Results: ${query.docs.length}');
+
     if (query.docs.isEmpty) {
-      // Throw a typed error — the UI will catch and display this
       throw Exception('No user found with email: $email');
     }
 
@@ -66,28 +69,28 @@ class GroupRepository {
     final userId = userDoc.id;
     final userData = userDoc.data() as Map<String, dynamic>;
 
-    // Use a Firestore transaction — both writes succeed or both fail
-    // This prevents a member being added to the group but not their user doc
+    print('Found user: $userId');
+
     await _firestore.runTransaction((transaction) async {
       final groupRef = _groups.doc(groupId);
-
       transaction.update(groupRef, {
-        // arrayUnion safely adds without duplicates
         'members': FieldValue.arrayUnion([userId]),
-        // Add their info to memberDetails nested map
         'memberDetails.$userId': {
           'name': userData['name'] ?? '',
           'email': userData['email'] ?? '',
-          
         },
       });
-
-      // Update the added user's groupIds list too
       transaction.update(_users.doc(userId), {
         'groupIds': FieldValue.arrayUnion([groupId]),
       });
     });
+    
+    print('Transaction complete');
+  } catch (e) {
+    print('Error in addMemberByEmail: $e');
+    rethrow;
   }
+}
 
   // ── LEAVE GROUP ─────────────────────────────────────────────────────────
   Future<void> leaveGroup(String groupId, String userId) async {

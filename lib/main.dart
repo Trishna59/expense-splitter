@@ -4,10 +4,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';  
 import 'package:cloud_firestore/cloud_firestore.dart';       
-import 'package:Expenses_splitter/core/theme/theme.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/pages/signin_page.dart';
-import 'package:Expenses_splitter/feature/auth/presentation/pages/verify_email_page.dart';
-import 'package:Expenses_splitter/feature/group/presentation/pages/groups_list_page.dart';
+import 'package:expenses_splitter/feature/auth/presentation/pages/signin_page.dart';
+import 'package:expenses_splitter/feature/auth/presentation/pages/verify_email_page.dart';
+import 'package:expenses_splitter/core/theme/theme.dart';
+import 'package:expenses_splitter/feature/group/presentation/pages/groups_list_page.dart';
 
 
 

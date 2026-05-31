@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Expenses_splitter/feature/expense/logic/providers/expense_provider.dart';
-import 'package:Expenses_splitter/feature/group/data/models/group_model.dart';
-import 'package:Expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
+import 'package:expenses_splitter/feature/expense/logic/providers/expense_provider.dart';
+import 'package:expenses_splitter/feature/group/data/models/group_model.dart';
+import 'package:expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
 
 class AddExpensePage extends ConsumerStatefulWidget {
   final GroupModel group;

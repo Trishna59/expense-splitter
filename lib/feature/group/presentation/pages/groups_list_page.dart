@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:Expenses_splitter/feature/group/logic/providers/group_provider.dart';
-import 'package:Expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
-import 'package:Expenses_splitter/feature/group/presentation/pages/group_detail_page.dart';
+import 'package:expenses_splitter/feature/group/logic/providers/group_provider.dart';
+import 'package:expenses_splitter/feature/auth/logic/providers/auth_provider.dart';
+import 'package:expenses_splitter/feature/group/presentation/pages/group_detail_page.dart';
 
 class GroupsListPage extends ConsumerWidget {
   const GroupsListPage({super.key});
