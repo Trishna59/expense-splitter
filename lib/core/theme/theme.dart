@@ -12,7 +12,7 @@ class AppTheme {
   }
 
   static final darkThemeMode = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: const Color.fromARGB(255, 130, 130, 198),
+    scaffoldBackgroundColor: const Color.fromARGB(255, 5, 5, 39),
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: EdgeInsets.all(27),
       enabledBorder: _border(),
