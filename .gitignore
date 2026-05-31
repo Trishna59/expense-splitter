@@ -49,3 +49,9 @@ android/app/google-services.json
 lib/firebase_options.dart
 */firebase_options.dart
 GoogleService-Info.plist
+.env
+.env.local
+android/key.properties
+*.jks
+*.keystore
+echo "android/app/google-services.json" >> .gitignore
