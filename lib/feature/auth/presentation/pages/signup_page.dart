@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/feature/auth/presentation/pages/signin_page.dart';
-import 'package:flutter_application_1/feature/auth/presentation/pages/verify_email_page.dart';
-import 'package:flutter_application_1/feature/auth/presentation/widgets/auth_field.dart';
-import 'package:flutter_application_1/feature/auth/presentation/widgets/auth_gradient_button.dart';
-import 'package:flutter_application_1/resources/auth_method.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/pages/signin_page.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/pages/verify_email_page.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/widgets/auth_field.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/widgets/auth_gradient_button.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/domain/data/auth_method.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});

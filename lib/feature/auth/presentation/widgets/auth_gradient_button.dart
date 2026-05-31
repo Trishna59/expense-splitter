@@ -1,7 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/theme/app_pallete.dart';
+import 'package:Expenses_splitter/core/theme/app_pallete.dart';
 
 class AuthGradientButton extends StatelessWidget {
   final String buttonText;

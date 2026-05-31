@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/feature/auth/presentation/pages/signup_page.dart';
-import 'package:flutter_application_1/feature/auth/presentation/widgets/auth_field.dart';
-import 'package:flutter_application_1/feature/auth/presentation/widgets/auth_gradient_button.dart';
-import 'package:flutter_application_1/resources/auth_method.dart';
-
+import 'package:Expenses_splitter/feature/auth/presentation/widgets/auth_field.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/widgets/auth_gradient_button.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/domain/data/auth_method.dart';
+import 'package:Expenses_splitter/feature/auth/presentation/pages/signup_page.dart';
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
 
@@ -31,10 +30,7 @@ class _SignInPageState extends State<SignInPage> {
       password: _passwordController.text.trim(),
     );
 
-    setState(() => _isLoading = false);
-
-    if (!mounted) return;
-
+    if (mounted) setState(() => _isLoading = false);
     if (res == 'success') {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
