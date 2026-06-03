@@ -1,20 +1,20 @@
-💰 Expense Splitter App
+ Expense Splitter App
 
 A Flutter mobile application for splitting expenses among groups of friends, 
 roommates, or colleagues. Built with Firebase and Riverpod.
 
-✨ Features
+ Features
 
-- 🔐 Email/password authentication with email verification
-- 👥 Create and manage groups (trips, events, shared living)
-- 💸 Add and track shared expenses
-- ⚖️ Equal split calculations with rounding handling
-- 🧮 Smart settlement engine — minimizes number of transactions
-- 📊 Real-time balance tracking per member
-- 📱 Offline support via Firestore cache
-- 🔒 Firestore security rules
+- Email/password authentication with email verification
+- Create and manage groups (trips, events, shared living)
+- Add and track shared expenses
+- Equal split calculations with rounding handling
+- Smart settlement engine — minimizes number of transactions
+- Real-time balance tracking per member
+- Offline support via Firestore cache
+- Firestore security rules
 
- 🛠️ Tech Stack
+ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -23,7 +23,7 @@ roommates, or colleagues. Built with Firebase and Riverpod.
 | State Management | Riverpod |
 | Architecture | Feature-first Clean Architecture |
 
-📁 Project Structure
+Project Structure
 
 \`\`\`
 lib/
@@ -34,11 +34,11 @@ lib/
 │   └── expense/        # Expense tracking & settlements
 \`\`\`
 
-🚀 Getting Started
+Getting Started
 
 1. Clone the repository
 \`\`\`bash
-git clone https://github.com/yourusername/expense-splitter.git
+git clone https://github.com/Trishna59/expense-splitter.git
 \`\`\`
 
 2. Install dependencies
@@ -58,7 +58,7 @@ flutter run
 \`\`\`
 
 
- 🧮 Settlement Algorithm
+Settlement Algorithm
 
 The app uses a greedy two-pointer algorithm to minimize transactions:
 
